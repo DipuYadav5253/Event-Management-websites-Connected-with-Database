@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="/static/images/event-logo.png" alt="College Event System Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Information</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <a href="{% url 'logins' %}" class="login-button">Login</a>
+                <div class="search-bar">
+                    <input type="text" name="searchBar" placeholder="Search...">
+                    <button type="submit">Search</button>
+                </div>
+            </div>
+        </div>
+    </header>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/register.css">
+    <title>Register</title>
+</head>
+<body>
+    <h1>Registration</h1>
+    <div class="container">
+        <form action="/registerlink/" method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Enter your Full Name" required>
+            </div>
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Username must be unique" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your Email ID" required>
+            </div>
+             
+            <div class="form-group">
+                <label>Gender:</label>
+                <div>
+                    <label>
+                        <input type="radio" id="male" name="gender" value="male" required>
+                        Male
+                    </label>
+                    <label>
+                        <input type="radio" id="female" name="gender" value="female" required>
+                        Female
+                    </label>
+                    <label>
+                        <input type="radio" id="other" name="gender" value="other" required>
+                        Other
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="enrollment">Enrollment No:</label>
+                <input type="text" id="enrollment" name="enrollment" placeholder="Enter your Enrollment Number" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter Strong Password" required>
+            </div>
+            <div class="form-group">
+                <label for="cpassword">Confirm Password:</label>
+                <input type="password" id="cpassword" name="cpassword" placeholder="Enter Strong Password" required>
+            </div>
+            <!-- Include other form fields as needed -->
+            <div class="form-group">
+                <label for="terms">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    I agree to the <a href="/terms-of-service/">Terms of Service</a>
+                </label>
+            </div>
+            <button type="submit">Register </button>
+            <p>Already have an account? <a href="/login" class="register-button">Login</a></p>
+        </form>
+        
+
+
+
+    </div>
+</body>
+</html>

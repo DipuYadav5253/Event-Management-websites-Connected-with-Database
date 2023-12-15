@@ -1,0 +1,67 @@
+/* Apply styles to form elements */
+
+body {
+    background-color: #fffafa;
+}
+
+
+/* Center the form container vertically and horizontally */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #f7f4f4;
+    /* Text color */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 60%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #f3eded;
+    /* Text color */
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+button {
+    background-color: #007bff;
+    /* Button color */
+    color: #fff;
+    /* Text color */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+    /* Button color on hover */
+}
+
+@media screen and (max-width: 768px) {
+    /* Adjust form elements for smaller screens */
+    .form-group {
+        margin-bottom: 15px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        padding: 8px;
+        font-size: 14px;
+    }
+    button {
+        padding: 8px 16px;
+    }
+}

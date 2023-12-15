@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/eventOrganizerRegistration.css">
+     
+    <title>Event Organizer Registration</title>
+    <!-- Add links to your CSS file and other dependencies here -->
+</head>
+
+<body>
+     
+    <h1>Event Organizer Registration</h1>
+    <div class="container">
+        
+        <form action="/organizerRegister/" method="POST">
+            {% csrf_token %}
+            
+            <!-- Full Name -->
+            <div class="form-group">
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" required>
+            </div>
+            
+            <!-- Username -->
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            
+            <!-- Email Address -->
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <!-- Password -->
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            
+            <!-- Contact Information -->
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+            
+            <!-- Organization or Affiliation -->
+            <div class="form-group">
+                <label for="organization">Organization (if applicable):</label>
+                <input type="text" id="organization" name="organization">
+            </div>
+            
+            <!-- Event Organization Experience -->
+            <div class="form-group">
+                <label for="experience">Event Organization Experience:</label>
+                <textarea id="experience" name="experience" rows="4"></textarea>
+            </div>
+            
+            <!-- Event Proposal -->
+            <div class="form-group">
+                <label for="event-proposal">Event Proposal:</label>
+                <textarea id="event-proposal" name="event_proposal" rows="4"></textarea>
+            </div>
+            
+            <!-- Event Type -->
+            <div class="form-group">
+                <label for="event-type">Event Type:</label>
+                <select id="event-type" name="event_type">
+                    <option value="conference">Conference</option>
+                    <option value="workshop">Workshop</option>
+                    <option value="cultural">Cultural Event</option>
+                    <option value="sports">Sports Event</option>
+                    <!-- Add more event types as needed -->
+                </select>
+            </div>
+            
+            <!-- Event Date and Venue Preferences -->
+            <div class="form-group">
+                <label for="event-date">Preferred Event Date:</label>
+                <input type="date" id="event-date" name="event_date">
+            </div>
+            <div class="form-group">
+                <label for="event-venue">Preferred Event Venue:</label>
+                <input type="text" id="event-venue" name="event_venue">
+            </div>
+            
+            <!-- Budget Estimate -->
+            <div class="form-group">
+                <label for="budget">Budget Estimate:</label>
+                <input type="text" id="budget" name="budget">
+            </div>
+            
+            <!-- Additional Comments or Requests -->
+            <div class="form-group">
+                <label for="comments">Additional Comments or Requests:</label>
+                <textarea id="comments" name="comments" rows="4"></textarea>
+            </div>
+            
+            <!-- Terms and Conditions -->
+            <div class="form-group">
+                <label for="terms">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    I agree to the <a href="/terms-of-service/">Terms of Service</a>
+                </label>
+            </div>
+            
+            <!-- CAPTCHA -->
+            <div class="form-group">
+                <!-- Add your CAPTCHA integration here -->
+            </div>
+            
+            <!-- Submit Button -->
+            <div class="form-group">
+                <button type="submit">Register</button>
+            </div>
+        </form>
+    </div>
+     
+</body>
+</html>

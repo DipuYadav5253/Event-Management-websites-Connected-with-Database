@@ -1,0 +1,78 @@
+/* Reset some default browser styles */
+
+body,
+h1,
+h2,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Header styles */
+
+header {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+/* Main content container */
+
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Headings */
+
+h1,
+h2 {
+    color: #333;
+}
+
+
+/* Team members */
+
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.team-member {
+    flex: 1;
+    margin: 10px;
+    text-align: center;
+}
+
+.team-member img {
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+
+/* Footer styles */
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 0;
+    background-color: #f4f4f4;
+}
+
+
+/* Responsive styles */
+
+@media screen and (max-width: 768px) {
+    section {
+        margin: 10px;
+        padding: 15px;
+    }
+}

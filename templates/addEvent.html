@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Element</title>
+    <link rel="stylesheet" href="/static/addEvent.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <div class="container">
+        <h1>Add Event</h1>
+        <form action="/submit-element/" method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="event_name">Event Name:</label>
+                <input type="text" id="event_name" name="event_name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="event_venue">Event Venue:</label>
+                <input type="text" id="event_venue" name="event_venue" required>
+            </div>
+            <div class="form-group">
+                <label for="event-type">Event Type:</label>
+                <select id="event-type" name="event_type">
+                    <option value="conference">Conference</option>
+                    <option value="workshop">Workshop</option>
+                    <option value="cultural">Cultural Event</option>
+                    <option value="sports">Sports Event</option>
+                     
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="event_date">Event Date:</label>
+                <input type="date" id="event_date" name="event_date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="event_description">Description:</label>
+                <textarea id="event_description" name="event_description" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="event_image">Image:</label>
+                <input type="file" id="event_image" name="event_image" accept="image/*">
+            </div>
+            <button type="submit">Add Event</button>
+        </form>
+    </div>
+</body>
+</html>
